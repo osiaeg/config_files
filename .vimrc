@@ -2,8 +2,8 @@
 let need_to_install_plugins = 0
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    "autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    " autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
     let need_to_install_plugins = 1
 endif
 
@@ -13,6 +13,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'ekalinin/dockerfile.vim'
+Plug 'tpope/vim-commentary'
 Plug 'morhetz/gruvbox'
 
 Plug 'majutsushi/tagbar'
@@ -21,10 +22,12 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/syntastic'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 filetype plugin indent on
 syntax on
+set cursorline
 
 if need_to_install_plugins == 1
     echo "Installing plugins..."
@@ -36,6 +39,8 @@ endif
 "Common settings
 set nofoldenable
 set hlsearch
+" Turn off search highlighting by pressing \\
+nnoremap <leader>\ :nohlsearch<Enter>
 set incsearch
 
 " always show the status bar
@@ -94,14 +99,13 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-nnoremap <C-N> :bnext<CR>
-nnoremap <C-P> :bprev<CR>
+nnoremap <C-Right> :bnext<CR>
+nnoremap <C-Left> :bprev<CR>
 
 " file browser
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let NERDTreeMinimalUI = 1
 let g:nerdtree_open = 0
-map <leader>n :call NERDTreeToggle()<CR>
 function NERDTreeToggle()
     NERDTreeTabsToggle
     if g:nerdtree_open == 1
@@ -127,3 +131,15 @@ map <C-t> :TagbarToggle<CR>
 
 "NERDTee
 map <C-n> :call NERDTreeToggle()<CR>
+autocmd VimEnter * NERDTree
+
+"vim-commentary
+vnoremap <C-_> :Commentary<CR>
+
+" vim-go
+au FileType go nmap <leader>b  <Plug>(go-build)
+au FileType go nmap <leader>r  <Plug>(go-run)
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
