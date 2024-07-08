@@ -9,6 +9,14 @@ endif
 
 call plug#begin()
 Plug 'scrooloose/nerdtree', {'on':  'NERDTreeToggle' }
+
+" Plugin help you find a file at lightning speed using fuzzy search
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" View and search LSP symbols, tags in Vim/NeoVim.
+Plug 'liuchengxu/vista.vim'
+
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'mitsuhiko/vim-jinja'
