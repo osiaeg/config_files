@@ -17,6 +17,9 @@ Plug 'junegunn/fzf.vim'
 " View and search LSP symbols, tags in Vim/NeoVim.
 Plug 'liuchengxu/vista.vim'
 
+" Python PEP8
+Plug 'Vimjas/vim-python-pep8-indent'
+
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'mitsuhiko/vim-jinja'
@@ -33,9 +36,15 @@ Plug 'scrooloose/syntastic'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
-filetype plugin indent on
 syntax on
+filetype on
+filetype plugin indent on
+
 set cursorline
+set mousehide
+
+set nobackup
+set noswapfile
 
 if need_to_install_plugins == 1
     echo "Installing plugins..."
@@ -67,12 +76,9 @@ set encoding=utf-8
 set fileencoding=utf-8
 
 "Colorsheme
-syntax on
 colorscheme gruvbox
 set background=dark
 let g:gruvbox_contrast_dark='hard'
-filetype on
-filetype plugin indent on
 
 "Настройка табов для Python, согласно рекоммендациям
 set tabstop=4
@@ -151,3 +157,5 @@ let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
+
+autocmd FileType python set omnifunc=pythoncomplete#Complete
