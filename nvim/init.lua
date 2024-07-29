@@ -18,3 +18,7 @@ require('plugins.telescope')
 require('nvim_comment').setup({
     operator_mapping = "<C-_>"
 }) 
+
+vim.keymap.set('n', '<space>f', function()
+  vim.lsp.buf.format { async = true }
+end, opts)
