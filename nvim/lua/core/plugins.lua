@@ -47,6 +47,11 @@ require("lazy").setup({
         'akinsho/bufferline.nvim', 
         version = "*", 
         dependencies = 'nvim-tree/nvim-web-devicons'
+    },
+    {
+        'akinsho/toggleterm.nvim', 
+        version = "*", 
+        config = true
     }
   -- -- Configure any other settings here. See the documentation for more details.
   -- -- colorscheme that will be used when installing plugins.
