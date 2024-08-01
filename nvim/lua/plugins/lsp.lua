@@ -2,7 +2,9 @@
 local lspconfig = require('lspconfig')
 lspconfig.gopls.setup{}
 -- Ebuild lsp-server
-lspconfig.termux_language_server.setup{}
+-- lspconfig.termux_language_server.setup{}
+lspconfig.pyright.setup{
+}
 
 -- Python lsp-server
 lspconfig.ruff_lsp.setup{

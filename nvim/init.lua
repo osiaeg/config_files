@@ -13,6 +13,7 @@ require('plugins.mason')
 require('plugins.autopairs')
 -- require('plugins.whichkey')
 require('plugins.telescope')
+require('plugins.bufferline')
 
 -- Commnet Ctrl + /
 require('nvim_comment').setup({

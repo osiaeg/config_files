@@ -43,10 +43,11 @@ require("lazy").setup({
         tag = '0.1.8',
         dependencies = {'nvim-lua/plenary.nvim'}
     },
-  -- spec = {
-  --   -- import your plugins
-  --   { import = "plugins" },
-  -- },
+    {
+        'akinsho/bufferline.nvim', 
+        version = "*", 
+        dependencies = 'nvim-tree/nvim-web-devicons'
+    }
   -- -- Configure any other settings here. See the documentation for more details.
   -- -- colorscheme that will be used when installing plugins.
   -- install = { colorscheme = { "habamax" } },
