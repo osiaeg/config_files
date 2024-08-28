@@ -12,3 +12,4 @@ echo "alias ll='ls -alh'" >> ~/.zshrc
 source ~/.bashrc
 
 
+o
