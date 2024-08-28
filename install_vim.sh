@@ -10,3 +10,5 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 echo "alias ll='ls -alh'" >> ~/.zshrc
 source ~/.bashrc
+
+
