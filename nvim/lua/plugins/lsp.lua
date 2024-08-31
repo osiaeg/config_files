@@ -3,7 +3,10 @@ local lspconfig = require('lspconfig')
 lspconfig.gopls.setup{}
 -- Ebuild lsp-server
 -- lspconfig.termux_language_server.setup{}
-lspconfig.pyright.setup{
+-- lspconfig.pyright.setup{
+-- }
+lspconfig.jedi_language_server.setup{
+
 }
 
 -- Python lsp-server
@@ -17,7 +20,7 @@ lspconfig.ruff_lsp.setup{
         },
         lint = {
             args = { 
-                "--line-length=88",
+                "--line-length=99",
             },
         },
     }
