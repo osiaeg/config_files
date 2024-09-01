@@ -5,9 +5,6 @@ lspconfig.gopls.setup{}
 -- lspconfig.termux_language_server.setup{}
 -- lspconfig.pyright.setup{
 -- }
-lspconfig.jedi_language_server.setup{
-
-}
 
 -- Python lsp-server
 lspconfig.ruff_lsp.setup{
