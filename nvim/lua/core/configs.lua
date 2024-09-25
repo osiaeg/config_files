@@ -11,3 +11,7 @@ vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.smartindent = true
+
+-- Highight cursor line
+vim.opt.cursorline = true
+vim.opt.colorcolumn = "79"
