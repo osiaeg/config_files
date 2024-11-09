@@ -14,6 +14,7 @@ require('plugins.autopairs')
 require('plugins.telescope')
 require('plugins.bufferline')
 require('plugins.toggleterm')
+require('plugins.lualine')
 
 -- Commnet Ctrl + /
 require('nvim_comment').setup({

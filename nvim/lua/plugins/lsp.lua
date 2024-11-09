@@ -17,7 +17,7 @@ lspconfig.pyright.setup{
 }
 
 -- Python lsp-server
-lspconfig.ruff_lsp.setup{
+lspconfig.ruff.setup{
     init_options = {
     settings = {
         format = {
