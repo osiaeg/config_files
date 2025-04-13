@@ -15,14 +15,10 @@ require('plugins.telescope')
 require('plugins.bufferline')
 require('plugins.toggleterm')
 require('plugins.lualine')
+require('plugins.indent')
 
 -- Commnet Ctrl + /
 require('nvim_comment').setup({
     operator_mapping = "<C-_>"
 }) 
 
-vim.keymap.set('n', '<space>f', function()
-  vim.lsp.buf.format { async = true }
-end, opts)
-
-vim.keymap.set('n', '<A-CR>', "<cmd>lua vim.lsp.buf.code_action()<CR>")

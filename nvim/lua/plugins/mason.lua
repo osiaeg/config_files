@@ -13,7 +13,6 @@ require("mason-lspconfig").setup {
         "gopls", 
         "pyright",
         "ruff",
-        "ruff_lsp",
     },
     automatic_installation = true,
 }

@@ -3,18 +3,7 @@ local lspconfig = require('lspconfig')
 lspconfig.gopls.setup{}
 -- Ebuild lsp-server
 -- lspconfig.termux_language_server.setup{}
-lspconfig.pyright.setup{
-    settings = {
-        reportIncompatibleMethodOveride = false,
-        reportIncompatibleVariableOverride = false,
-        python = {
-            analysis = {
-                reportIncompatibleMethodOveride = false,
-                reportIncompatibleVariableOverride = false,
-            }
-        }
-    }
-}
+lspconfig.pyright.setup{}
 
 -- Python lsp-server
 lspconfig.ruff.setup{
