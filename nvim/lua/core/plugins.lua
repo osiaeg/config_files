@@ -39,6 +39,7 @@ require("lazy").setup({
     {'terrortylor/nvim-comment'},
     {'windwp/nvim-autopairs'},
     {'folke/which-key.nvim'},
+    {"lewis6991/gitsigns.nvim"},
     {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.8',

@@ -16,6 +16,7 @@ require('plugins.bufferline')
 require('plugins.toggleterm')
 require('plugins.lualine')
 require('plugins.indent')
+require('plugins.gitsign')
 
 -- Commnet Ctrl + /
 require('nvim_comment').setup({

@@ -11,7 +11,9 @@ vim.keymap.set('t', '<esc>', '<C-\\><C-n>')
 vim.keymap.set('n', '<C-q>', ':bd <Enter>')
 
 -- LSP
-vim.keymap.set('n', '<leader>li', ':LspInfo <Enter>')
+vim.keymap.set('n', '<leader>li', ':LspInfo<Enter>')
 vim.keymap.set('n', '<leader>lf', function() vim.lsp.buf.format { async = true } end, opts)
-vim.keymap.set('n', '<A-CR>', "<cmd>lua vim.lsp.buf.code_action()<CR>")
+vim.keymap.set('n', '<leader>lr', ":lua vim.lsp.buf.rename()<Enter>")
+vim.keymap.set('n', '<leader>la', ":lua vim.lsp.buf.code_action()<Enter>")
+vim.keymap.set('n', 'gra', ":lua vim.lsp.buf.code_action()<Enter>")
 
