@@ -15,3 +15,5 @@ vim.opt.smartindent = true
 -- Highight cursor line
 vim.opt.cursorline = true
 vim.opt.colorcolumn = "99"
+
+vim.o.termguicolors = true

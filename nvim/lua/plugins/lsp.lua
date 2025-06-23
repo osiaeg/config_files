@@ -4,6 +4,9 @@ lspconfig.gopls.setup{}
 -- Ebuild lsp-server
 -- lspconfig.termux_language_server.setup{}
 lspconfig.pyright.setup{}
+lspconfig.eslint.setup{
+    filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
+}
 
 -- Python lsp-server
 lspconfig.ruff.setup{
