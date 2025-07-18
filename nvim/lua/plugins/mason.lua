@@ -13,6 +13,7 @@ require("mason-lspconfig").setup {
         "gopls", 
         "pyright",
         "ruff",
+        "rust_analyzer"
     },
     automatic_installation = true,
 }

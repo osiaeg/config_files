@@ -1,6 +1,7 @@
 -- Setup language servers.
 local lspconfig = require('lspconfig')
 lspconfig.gopls.setup{}
+lspconfig.rust_analyzer.setup{}
 -- Ebuild lsp-server
 -- lspconfig.termux_language_server.setup{}
 lspconfig.pyright.setup{}
